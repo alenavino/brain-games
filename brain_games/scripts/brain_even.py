@@ -5,9 +5,6 @@ from random import randint
 import prompt
 
 
-name_user = ''
-
-
 def greet():
     print('Welcome to the Brain Games!')
 
@@ -15,11 +12,11 @@ def greet():
 def welcome_user():
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
-    global name_user
-    name_user = name
+    return name
 
 
 def even():
+    user_name = welcome_user()
     i = 1
     while i < 4:
         print('Answer "yes" if the number is even, otherwise answer "no".')
@@ -34,17 +31,17 @@ def even():
         if answer == correct_answer:
             print('Correct!')
         else:
-            print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'")
-            print(f"Let's try again, {name_user}!")
+            print(f"'{answer}' is wrong answer ;(. \
+Correct answer was '{correct_answer}'")
+            print(f"Let's try again, {user_name}!")
             break
         i += 1
         if i > 3:
-            print(f'Congratulations, {name_user}!')
+            print(f'Congratulations, {user_name}!')
 
 
 def main():
     greet()
-    welcome_user()
     even()
 
 
