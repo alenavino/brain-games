@@ -17,4 +17,3 @@ def progression():
         expression += str(element)
         expression += ' '
     return exercise, expression, correct_answer
-    
