@@ -17,9 +17,9 @@ def welcome_user():
 
 def even():
     user_name = welcome_user()
+    print('Answer "yes" if the number is even, otherwise answer "no".')
     i = 1
     while i < 4:
-        print('Answer "yes" if the number is even, otherwise answer "no".')
         number = randint(1, 100)
         correct_answer = ''
         if number % 2 == 0:
