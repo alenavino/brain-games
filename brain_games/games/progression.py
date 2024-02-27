@@ -9,7 +9,7 @@ def progression():
     while len(lst) < 10:
         last_number = lst[-1]
         lst.append(last_number + difference)
-    secret = randint(1, 10)
+    secret = randint(0, 9)
     correct_answer = lst[secret]
     lst[secret] = '..'
     expression = ''
