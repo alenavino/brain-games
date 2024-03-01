@@ -4,7 +4,8 @@ import prompt
 
 def engine(game):
     user_name = welcome_user()
-    for i in range(1, 4):
+    i = 1
+    while i < 4:
         exercise, expression, correct_answer = game()
         if i == 1:
             print(exercise)
@@ -19,3 +20,4 @@ Correct answer was '{correct_answer}'")
             break
         if i == 3:
             print(f'Congratulations, {user_name}!')
+        i += 1
